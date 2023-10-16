@@ -30,7 +30,7 @@
 1) Go to the AWS Console and make a new EC2 instance.
 - Ubuntu 20.04 lts.
 - t2 micro
-- `tech254.pem` SSH key pair
+- `file.pem` SSH key pair
 - Base Security group (22, 80, 3000)
 2) Connect to your instance on GitBash.
 3) Run:
