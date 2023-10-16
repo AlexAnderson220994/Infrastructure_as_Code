@@ -22,3 +22,72 @@
 - Ansible is an open-source automation tool designed to simplify and automate various IT tasks, including configuration management, application deployment, task automation, and orchestration. 
 - It allows you to define and manage infrastructure as code, making it easier to provision and configure systems and applications consistently. 
 - Ansible is known for its simplicity, agentless architecture, and the use of human-readable YAML files for defining automation tasks
+
+## Ansible Connection on EC2
+
+### Step 1 - Make an EC2 Instance on AWS
+
+1) Go to the AWS Console and make a new EC2 instance.
+- Ubuntu 20.04 lts.
+- t2 micro
+- `tech254.pem` SSH key pair
+- Base Security group (22, 80, 3000)
+2) Connect to your instance on GitBash.
+3) Run:
+````
+sudo apt update
+````
+````
+sudo apt upgrade -y
+````
+
+### Step 2 - Install Ansible
+
+1) Check if you have ansible installed:
+````
+ansible --version
+````
+2) Run the following commands:
+````
+sudo apt install software-properties-common
+````
+````
+sudo apt-add-repository ppa:ansible/ansible
+````
+3) Press "Enter"
+4) Run update again:
+````
+sudo apt update -y
+````
+5) Install Ansible:
+````
+sudo apt install ansible -y
+````
+6) Check Ansible version again to see if its installed:
+````
+ansible --version
+````
+7) cd into the ansible folder:
+````
+cd /etc/ansible/
+````
+8) Make sure the correct Ansible files are there.
+
+**NOTE**: Run the following commands to view files in a folder in a better way:
+````
+sudo apt install tree
+````
+```` 
+tree
+````
+
+### Step 3 - Make sure the SSH key has been added to .ssh folder in Ubuntu
+
+1) cd into the .ssh folder on Ubuntu
+````
+cd ~/.ssh
+````
+2) Open up a new GitBash terminal connected to your local OS and run the following command to copy the .pem file SSH key to Ubuntu:
+````
+scp -i "~/.ssh/tech254.pem" ~/.ssh/tech254.pem ubuntu@<Public Instance IP>:~/.ssh
+````
