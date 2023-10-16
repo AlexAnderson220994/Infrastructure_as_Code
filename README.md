@@ -91,3 +91,16 @@ cd ~/.ssh
 ````
 scp -i "~/.ssh/tech254.pem" ~/.ssh/tech254.pem ubuntu@<Public Instance IP>:~/.ssh
 ````
+
+## Connecting from Ansible Controller Instance to other Instances
+
+
+1) Connect to your "ansible-controller" EC2 instance the normal way (command below):
+````
+ssh -i YourControllerKeyName.pem ubuntu@controller-instance-ip
+````
+2) Make sure each EC2 instance has the file.pem private key added to the .ssh folder (see Ansible Connection Step 3).
+3) Input the following command using the name of the file.pem private key within the Target Instance you're connecting to plus the PRIVATE IP of that instance.
+````
+ssh -i YourTargetKeyName.pem ubuntu@target-instance-private-ip
+````
