@@ -153,3 +153,18 @@ sudo ssh -i "controller_file.pem" ubuntu@ec2-3-250-69-186.eu-west-1.compute.amaz
 ````
 cd /etc/ansible/
 ````
+8) Nano into the "hosts" file to add the web IP address:
+````
+sudo nano hosts
+````
+9) Under "Ex 2", Make a collection called hosts `[web]` and put the public IP address of the web server underneath.
+- The format of the public IP address is as follows:
+````
+ec2-instance ansible_host=3.250.69.186 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/tech254.pem
+````
+10) Each element in the above is now defined.
+11) Do the command:
+````
+sudo ansible web -m ping
+````
+12) Should come back with a successful ping if the link is there.
