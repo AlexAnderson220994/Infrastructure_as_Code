@@ -37,3 +37,13 @@
     - name: Display NPM version
       debug:
         msg: "NPM version is {{ npm_version.stdout }}"
+
+    - name: install NPM
+         shell: npm i
+         args:
+           chdir: /home/ubuntu
+
+    - name: Install PM2
+      npm:
+        name: pm2
+        global: yes

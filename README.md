@@ -1,21 +1,19 @@
 # Infrastructure as Code
 
-## What is Infrastructure as Code (IaC)?
+## IaC Research & Development
+
+#### What is Infrastructure as Code (IaC)?
 
 - Infrastructure as Code (IaC) is a software engineering approach to managing and provisioning infrastructure and its configurations through machine-readable code or scripts.
 
-## What is Configure Management?
+### Configuration Management (with **Ansible**)
+
+#### What is Configure Management?
 
 - Configuration management, often abbreviated as CM, is a set of practices and processes used in IT and systems engineering to manage and control the configuration of software, hardware, and infrastructure components in a systematic and consistent manner.
 - The primary goal of configuration management is to ensure that systems and software remain stable, reliable, and predictable throughout their lifecycle.
 
-## What is Orchestration?
-
-- Orchestration is the coordination and automation of multiple tasks, processes, or operations to achieve a specific outcome or goal. 
-- It is often used in the context of managing complex workflows, especially in IT, cloud computing, and application deployment. 
-- Orchestration involves managing the sequence, timing, and dependencies of various tasks to ensure they work together harmoniously.
-
-## What is Ansible?
+#### What is Ansible?
 
 ![Alt text](<Images/1. Ansible diagram.jpg>)
 
@@ -23,24 +21,24 @@
 - It allows you to define and manage infrastructure as code, making it easier to provision and configure systems and applications consistently. 
 - Ansible is known for its simplicity, agentless architecture, and the use of human-readable YAML files for defining automation tasks
 
-## Why use Ansible?
+#### Why use Ansible?
 
 - Simplicity: Ansible uses a simple, human-readable YAML syntax for defining automation tasks, making it accessible to both system administrators and developers. You don't need to be a programmer to work effectively with Ansible.
 - Agentless: Ansible operates in an agentless mode, which means it doesn't require any software to be installed on the target systems. This makes it easy to set up and manage.
 - Idempotence: Ansible ensures idempotence, which means that applying a configuration multiple times has the same effect as applying it once. This reduces the risk of unintended changes and simplifies the automation process.
 
-## What are Playbooks?
+#### What are Playbooks?
 
 - Playbooks are written in YAML (Yet Another Markup Language) and are used to define a series of tasks, configurations, and automation steps that Ansible will execute on remote systems. 
 - Playbooks provide a way to describe how to achieve a specific automation goal, such as configuring servers, deploying applications, or managing infrastructure.
 - Playbooks are central to Ansible's configuration management and automation capabilities, allowing you to define, document, and execute complex tasks and operations on remote systems in a repeatable and consistent manner.
 
-## What are ad-hoc commands?
+#### What are ad-hoc commands?
 
 - Ad-hoc commands in Ansible are one-off, single-line commands that you can use to perform quick tasks or gather information on remote hosts without the need for a separate playbook. 
 - These commands are executed using the ansible command-line tool and are useful for tasks that don't require the creation of a complete playbook.
 
-## What is YAML?
+#### What is YAML?
 
 - Stands for "YAML Ain't Markup Language" or "Yet Another Markup Language" (depending on who you speak to) is a human-readable data serialization format. 
 - Often used for configuration files and data exchange between languages with different data structures. 
@@ -49,6 +47,33 @@
 - Structured Data: YAML allows you to represent structured data like lists, dictionaries (maps), and scalars in a clear and concise manner.
 - Data Types: YAML supports various data types, including strings, numbers, booleans, and more. It also allows for complex data structures like lists and dictionaries.
 - Comments: YAML files can include comments to provide additional information or context.
+
+### Orchestration (with **Terraform**)
+
+#### What is Orchestration?
+
+- Orchestration is the coordination and automation of multiple tasks, processes, or operations to achieve a specific outcome or goal. 
+- It is often used in the context of managing complex workflows, especially in IT, cloud computing, and application deployment. 
+- Orchestration involves managing the sequence, timing, and dependencies of various tasks to ensure they work together harmoniously.
+
+#### What is Terraform?
+
+- Terraform is an open-source infrastructure as Code tool.
+- It was developed by HashiCorp. 
+- It is designed to automate and simplify the provisioning and management of infrastructure resources such as virtual machines, networks, storage, and other cloud-based services. 
+- Terraform allows users to define their infrastructure in a declarative configuration language and then apply that configuration to create and manage resources in various cloud providers, data centers, and other infrastructure environments.
+
+#### Why use Terraform?
+
+- Terraform allows you to define and manage your infrastructure using code, making it manageable, maintainable and version controlled.
+- Declarative - You declare the desired state of your infrastructure with config files then Terraform makes your infrastructure match this state.
+- Supports a wide range of cloud services.
+- Resource dependency management - Terraform automatically manages dependencies, ensuring that resources are created, updated, or destroyed in the correct order, reducing the risk of configuration errors.
+- Terraform's two-step process of planning and applying changes allows for validation and review of proposed changes before they are implemented, reducing the risk of unintended consequences.
+
+### Who uses Terraform?
+
+- Terraform is popular among DevOps teams, cloud engineers, system administrators
 
 ## Ansible Connection on EC2
 
