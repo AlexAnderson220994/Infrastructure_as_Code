@@ -73,7 +73,9 @@
 
 ### Who uses Terraform?
 
-- Terraform is popular among DevOps teams, cloud engineers, system administrators
+- Terraform is popular among DevOps teams, cloud engineers, system administrators.
+- Cloud engineers leverage Terraform to create, modify, and manage resources on cloud platforms like AWS, Azure, Google Cloud, and others. Terraform simplifies the process of building and scaling cloud-based infrastructure.
+- DevOps professionals use Terraform to automate the provisioning and management of infrastructure, ensuring that development and operations are closely aligned and enabling continuous integration and delivery (CI/CD) pipelines.
 
 ## Ansible Connection on EC2
 
